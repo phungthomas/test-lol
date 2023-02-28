@@ -21,6 +21,8 @@ spec:
   revisionHistoryLimit: 3
   strategy:
     canary: #Indicates that the rollout should use the Canary strategy
+      canaryService: canary-service
+      stableService: stable-service
       maxSurge: "25%"
       maxUnavailable: 0
       steps:
