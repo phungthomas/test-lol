@@ -43,8 +43,9 @@ kind: Service
 metadata:
   name: prometheus-svc
 spec:
+  type: ClusterIP
   selector:
-    app.kubernetes.io/name: prometheus
+    app: prometheus
   ports:
     - protocol: TCP
       port: 9090
